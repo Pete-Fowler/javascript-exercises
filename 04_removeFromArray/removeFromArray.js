@@ -12,6 +12,10 @@ remove each arg with a splice()
 how to deal with changing array length after it is spliced?
 
 Example: removeFromArray(['hey', 2, 3, 'ho'], ['hey', 3] should return [2, 'ho'] but is removing ho
+i=1 [2, 3, 'ho'], j=2
+
+at i=1 j=1 it removed ho then got stuck
+
 */
 
 const removeFromArray = function(array, ...args) {
