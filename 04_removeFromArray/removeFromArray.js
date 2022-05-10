@@ -11,20 +11,19 @@ remove each arg with a splice()
 
 how to deal with changing array length after it is spliced?
 
-Example: removeFromArray(['hey', 2, 3, 'ho'], ['hey', 3] should return [2, 'ho'] but is removing ho
-i=1 [2, 3, 'ho'], j=2
+Example: removeFromArray(['hey', 2, 3, 'ho'], ['hey', 3] should return [2, 'ho'] but is removing 
+hey and then ho
 
 at i=1 j=1 it removed ho then got stuck
 
 */
 
 const removeFromArray = function(array, ...args) {
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < args.length; j++) {
+    for (let j = 0; j < args.length; j++)
+        for (let i = 0; i < array.length; i++) {
+         {
             if (array[i] === args[j]) {
-                array.splice(array[i - 1], 1);
-                i = 0;      //added to reset loops because a value was missed with args [3, 2]
-                
+                array.splice(i, 1);                
             }
         }
     }
