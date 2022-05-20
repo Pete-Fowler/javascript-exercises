@@ -1,21 +1,10 @@
 const palindromes = function (str) {
-    let fwdStr = str
-    .toLowerCase()
-    .replace(/[^A-Za-z]/g, '')
-    .split('');
-
-    let bwdStr = [];
-    for (let i = 0; i < fwdStr.length; i++) {
-        bwdStr.unshift(fwdStr[i]);
-    }
-    bwdStr = bwdStr.join('');
-    fwdStr = fwdStr.join('');
-    if (bwdStr === fwdStr) {
-        return true;
-    } else {
-        return false;
-    }
+    let newStr = str.toLowerCase().replace(/[^a-z]/g, '');
+    return (
+        newStr.split('').reverse().join('') === newStr);
 };
+// initial attempt was lengthy and complicated and used extra variables and a 
+// for loop
 
 // Do not edit below this line
 module.exports = palindromes;
