@@ -1,3 +1,13 @@
+/* Lessons:
+	I got hung up on ...array in the sum function, which created an empty
+	array within an empty array, so nothing worked. The solution was to 
+	just pass the function a single value such as array.
+
+	I learned about reduce() and how it could be used to execute a function on
+	each element of an array. Example: 
+	array.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+*/
+
 const calculator = require('./calculator');
 
 describe('add', () => {

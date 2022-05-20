@@ -6,5 +6,8 @@ const palindromes = function (str) {
 // initial attempt was lengthy and complicated and used extra variables and a 
 // for loop
 
+
+
+
 // Do not edit below this line
 module.exports = palindromes;
